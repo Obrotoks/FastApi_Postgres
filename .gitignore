@@ -1,2 +1,2 @@
 *.src
-.py_fastapi/*
+py_fastapi/
