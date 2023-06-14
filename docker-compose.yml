@@ -17,9 +17,21 @@ services:
       timeout: 5s
       retries: 5
     ports:
-      - "6666:8080"
+      - "5432:5432"
     volumes:
       - db-data:/var/lib/postgresql/data
     restart: unless-stopped
+  api:
+    build:
+        context: .
+        dockerfile: Dockerfile.python
+    environment:
+      - DB_CONNSTR=postgresql://${PS_USER}:${PS_PASSWORD}@post_db:5432/${PS_DB}
+    ports:
+      - 8000:8000
+    links:
+      - post_db
+    restart: unless-stopped
+ 
 volumes:
   db-data: 

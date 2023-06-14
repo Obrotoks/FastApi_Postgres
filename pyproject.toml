@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "fastapi-postgres"
+version = "0.1.0"
+description = ""
+authors = ["Obrotoks <110456512+Obrotoks@users.noreply.github.com>"]
+readme = "README.md"
+packages = [{include = "fastapi_postgres"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+alembic = "^1.11.1"
+fastapi = "^0.97.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

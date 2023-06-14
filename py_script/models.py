@@ -2,7 +2,7 @@ from sqlalchemy import Column, String, Integer
 from sqlalchemy import create_engine, MetaData
 from sqlalchemy.ext.declarative import declarative_base
 
-DB_CONNSTR='postgresql://ps:ps_2023@localhost:5432/RAW'
+DB_CONNSTR='postgresql://ps:ps_2023@post_db:5432/RAW'
 
 engine = create_engine(DB_CONNSTR) if DB_CONNSTR else None
 meta = MetaData(DB_CONNSTR)
