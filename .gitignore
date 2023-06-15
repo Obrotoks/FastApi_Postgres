@@ -1,2 +1,1 @@
-*.src
-py_fastapi/
+venv/
